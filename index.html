@@ -1,0 +1,202 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Local Helper Hiring Platform UI</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="app-header">
+      <div>
+        <p class="eyebrow">MVP UI KIT</p>
+        <h1>Local Helper Hiring Platform</h1>
+        <p class="subtitle">Clean, trustworthy, mobile-first experience for helpers and employers.</p>
+      </div>
+      <button class="btn btn-primary">Launch Product Demo</button>
+    </header>
+
+    <main class="screen-grid">
+      <section class="screen auth-screen">
+        <h2>Authentication</h2>
+        <p class="muted">OTP login/signup with country code and success animation.</p>
+        <div class="card auth-card">
+          <div class="illustration">📱</div>
+          <label>Phone number</label>
+          <div class="phone-input">
+            <select>
+              <option>+91</option>
+              <option>+1</option>
+              <option>+44</option>
+            </select>
+            <input type="tel" placeholder="98765 43210" />
+          </div>
+          <button class="btn btn-primary">Send OTP</button>
+          <div class="otp-row">
+            <input maxlength="1" /><input maxlength="1" /><input maxlength="1" /><input maxlength="1" />
+          </div>
+          <button class="btn btn-secondary">Verify & Continue</button>
+          <div class="success-pill">✅ Login Successful</div>
+        </div>
+      </section>
+
+      <section class="screen profile-screen">
+        <h2>Profile Creation Flow</h2>
+        <p class="muted">5-step onboarding optimized for low-literacy users.</p>
+        <div class="card">
+          <div class="progress-wrap">
+            <div class="progress-bar"><span></span></div>
+            <div class="step-labels"><span class="active">1</span><span>2</span><span>3</span><span>4</span><span>5</span></div>
+          </div>
+
+          <div class="steps-grid">
+            <article class="mini-step">
+              <h3>Step 1 • Basic Info</h3>
+              <input placeholder="Full name" />
+              <button class="btn btn-ghost">Upload Photo</button>
+            </article>
+            <article class="mini-step">
+              <h3>Step 2 • Skills</h3>
+              <div class="chips">
+                <button>Cleaning</button><button>Cooking</button><button class="active">Babysitting</button><button>Driver</button>
+              </div>
+            </article>
+            <article class="mini-step">
+              <h3>Step 3 • Location</h3>
+              <div class="map-placeholder">🗺️ Map Picker</div>
+              <input placeholder="Manual address" />
+            </article>
+            <article class="mini-step">
+              <h3>Step 4 • Availability</h3>
+              <select>
+                <option>Available now</option>
+                <option>Available weekdays</option>
+                <option>Not available</option>
+              </select>
+            </article>
+            <article class="mini-step profile-preview">
+              <h3>Step 5 • Preview</h3>
+              <div class="helper-chip">
+                <div class="avatar">A</div>
+                <div>
+                  <strong>Asha Kumari</strong>
+                  <p>Babysitting • 4.8 ⭐</p>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="screen browse-screen">
+        <h2>Browse Helpers</h2>
+        <div class="toolbar">
+          <input placeholder="Search by name or skill" />
+          <button class="btn btn-ghost">Filter</button>
+        </div>
+        <div class="tabs"><button class="active">All</button><button>Home Care</button><button>Kitchen</button><button>Elderly</button></div>
+        <div class="helpers-grid">
+          <article class="helper-card">
+            <div class="helper-head">
+              <div class="avatar">RK</div>
+              <div><h3>Ravi Kumar <span class="badge">✔ Verified</span></h3><p>2.1 km away</p></div>
+              <span class="status available">Available</span>
+            </div>
+            <p class="tags"><span>Plumbing</span><span>Repairs</span></p>
+            <p class="rating">⭐ 4.9 (152 reviews)</p>
+            <button class="btn btn-primary hire-trigger">Hire</button>
+          </article>
+          <article class="helper-card">
+            <div class="helper-head">
+              <div class="avatar">SM</div>
+              <div><h3>Shanta M.</h3><p>1.4 km away</p></div>
+              <span class="status busy">Busy</span>
+            </div>
+            <p class="tags"><span>Cooking</span><span>Cleaning</span></p>
+            <p class="rating">⭐ 4.6 (87 reviews)</p>
+            <button class="btn btn-secondary">View Profile</button>
+          </article>
+        </div>
+      </section>
+
+      <section class="screen">
+        <h2>Job Post</h2>
+        <div class="card form-grid">
+          <label>🧾 Job Title<input placeholder="Need helper for house cleaning" /></label>
+          <label>📝 Description<textarea placeholder="Describe tasks and expectations"></textarea></label>
+          <label>💰 Budget<input placeholder="₹1200" /></label>
+          <label>📅 Date & Time<input type="datetime-local" /></label>
+          <label>📍 Location<input placeholder="Sector 21, Noida" /></label>
+          <button class="btn btn-primary">Post Job</button>
+        </div>
+      </section>
+
+      <section class="screen">
+        <h2>Hire Flow + Rating</h2>
+        <div class="card flow-card">
+          <p>Tap hire to open confirmation modal and success animation.</p>
+          <div class="modal-preview">
+            <h3>Confirm Hiring</h3>
+            <p>Ravi Kumar • Plumbing • 4.9 ⭐</p>
+            <button class="btn btn-primary">Confirm Hire</button>
+          </div>
+          <div class="success-card">🎉 Helper Hired Successfully!</div>
+          <div class="rating-box">
+            <h3>Rate this helper</h3>
+            <div class="stars" aria-label="Star rating">
+              <button>★</button><button>★</button><button>★</button><button>★</button><button>★</button>
+            </div>
+            <textarea placeholder="Write your review"></textarea>
+          </div>
+        </div>
+      </section>
+
+      <section class="screen">
+        <h2>Design System</h2>
+        <div class="card ds-grid">
+          <article>
+            <h3>Color Palette</h3>
+            <ul>
+              <li><span class="swatch primary"></span>Primary #2563EB</li>
+              <li><span class="swatch accent"></span>Accent #0EA5A4</li>
+              <li><span class="swatch success"></span>Success #16A34A</li>
+              <li><span class="swatch neutral"></span>Neutral #0F172A / #E2E8F0</li>
+            </ul>
+          </article>
+          <article>
+            <h3>Typography</h3>
+            <p>Inter</p>
+            <p>H1 32/40 • H2 24/32 • Body 16/24 • Caption 14/20</p>
+          </article>
+          <article>
+            <h3>Spacing Scale</h3>
+            <p>4 • 8 • 12 • 16 • 24 • 32</p>
+          </article>
+          <article>
+            <h3>Components</h3>
+            <p>Cards, chips, tabs, status pills, modal, progress, rating stars.</p>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <div class="modal" id="hireModal" hidden>
+      <div class="modal-content">
+        <h3>Hire Ravi Kumar?</h3>
+        <p>Plumbing expert • 2.1 km • Available now</p>
+        <div class="modal-actions">
+          <button class="btn btn-ghost" id="cancelHire">Cancel</button>
+          <button class="btn btn-primary" id="confirmHire">Confirm</button>
+        </div>
+      </div>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
